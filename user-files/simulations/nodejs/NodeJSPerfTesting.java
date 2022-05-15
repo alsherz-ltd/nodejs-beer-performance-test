@@ -15,7 +15,7 @@ public class NodeJSPerfTesting extends Simulation {
     HttpProtocolBuilder httpProtocol =
             http
                     // Here is the root for all relative URLs
-                    .baseUrl("http://localhost:3000")
+                    .baseUrl(System.getProperty("lb.url", "http://localhost:3000"))
                     // Here are the common headers
                     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
                     .doNotTrackHeader("1")
